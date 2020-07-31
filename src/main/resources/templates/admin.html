@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8" />
+    <title>Book Store</title>
+
+    <link rel="stylesheet" th:href="@{/css/home.css}" href="css/layout.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" th:href="@{/css/menu.css}" href="css/menu.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" th:href="@{/css/component.css}" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" th:href="@{/css/default.css}" type="text/css" href="css/default.css" />
+</head>
+<body>
+<div class="container">
+    <div class="content">
+
+        <ul id="nav">
+            <li><a th:href="@{/home}">Home</a></li>
+            <li><a th:href="@{admin/add}" class="current">Add book</a></li>
+            <li><a th:href="@{admin/new}" class="current">Add user</a></li>
+            <li><a th:href="@{/admin/pdfReport}">PDF Report</a></li>
+            <li><a th:href="@{/admin/csvReport}">CSV Report</a></li>
+        </ul>
+    </div>
+    <div class="column">
+        <div id="sb-search" class="sb-search">
+            <form th:action="@{/admin}" th:method="post">
+                <input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search"/>
+                <input class="sb-search-submit" type="submit" value=""/>
+                <span class="sb-icon-search"></span>
+                <select name="option">
+                    <option value="book">Book</option>
+                    <option value="user">User</option>
+                </select>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <h2>Book Store</h2>
+    <a th:href="@{/logout}" class="stuts">Everything done? <span>Logout</span></a>
+</footer>
+<script src="js/classie.js"></script>
+<script src="js/uisearch.js"></script>
+<script>
+    new UISearch( document.getElementById( 'sb-search' ) );
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Users>
+    <User id="1">
+        <name>admin</name>
+        <email>xa@gmail.com</email>
+        <username>admin</username>
+        <password>admin</password>
+        <role>ROLE_ADMIN</role>
+    </User>
+    <User id="2">
+        <name>user</name>
+        <email>x@gmail.com</email>
+        <username>user</username>
+        <password>user</password>
+        <role>ROLE_USER</role>
+    </User>
+    <User id="224">
+        <name>Test Edit</name>
+        <email>test.edit@gmail.com</email>
+        <username>testedit</username>
+        <password>test</password>
+        <role>ROLE_USER</role>
+    </User>
+</Users>
